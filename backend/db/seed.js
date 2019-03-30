@@ -1,5 +1,7 @@
 const pgp = require("pg-promise")({});
-const db = pgp("postgres://localhost:5432/notetorious");
+const db = pgp(
+  process.env.DATABASE_URL || "postgres://localhost:5432/notetorious"
+);
 
 const faker = require("faker");
 
@@ -49,7 +51,7 @@ notes = notes.join(", ");
 
 let tags = [];
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 10; i++) {
   let name = faker.random.word();
   tags.push(`('${name}')`);
 }
@@ -61,8 +63,8 @@ tags = tags.join(", ");
 let taggings = [];
 
 for (let i = 0; i < 10; i++) {
-  let note_id = Math.ceil(Math.random() * 20);
-  let tag_id = Math.ceil(Math.random() * 20);
+  let note_id = Math.ceil(Math.random() * 10);
+  let tag_id = Math.ceil(Math.random() * 10);
   taggings.push(`(${note_id}, ${tag_id})`);
 }
 
