@@ -11,9 +11,9 @@ const {
 const { loginRequired } = require("../auth/helpers.js");
 
 /* GET users listing. */
-router.get("/", loginRequired, getAllNotebooks);
+router.get("/", getAllNotebooks);
 router.get("/:notebook_id", loginRequired, getSingleNotebook);
-router.post("/",loginRequired, addNotebook);
+router.post("/", loginRequired, addNotebook);
 router.patch("/:notebook_id", loginRequired, editNotebook);
 router.delete("/:notebook_id", loginRequired, deleteNotebook);
 
