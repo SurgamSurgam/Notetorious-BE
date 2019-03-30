@@ -14,7 +14,7 @@ const {
 const { loginRequired } = require("../auth/helpers.js");
 
 /* GET users listing. */
-router.get("/", loginRequired, getAllNotes);
+router.get("/", getAllNotes);
 router.get("/:notebook_id", loginRequired, getAllNotesFromSingleNotebook);
 router.get("/tag/:tag_name", loginRequired, getAllNotesFromTag);
 router.get("/:notebook_id/:note_id", loginRequired, getSingleNoteFromNotebook);
