@@ -1,0 +1,358 @@
+.notesMainWrapper {
+  display: grid;
+  grid-template-columns: 347px 846px;
+  background-color: #f8f8f8;
+  margin-top: -25px;
+  grid-column-start: 2;
+}
+
+.notesAllNotesMainWrapper {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  width: 345px;
+  height: 770px;
+  border-right: 1px solid #e6e6e6;
+}
+
+.notesEditorMainWrapper {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  background-color: #fff;
+}
+
+.allNotesH1TitleDiv {
+  width: 302px;
+  height: 56px;
+  padding: 15px 18px 30px 25px;
+}
+
+.allNotesH1TitleDiv > h1 {
+  width: 290px;
+  height: 30px;
+  padding-right: 12px;
+  margin: 13.4px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+
+.divider {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 1em 0;
+  padding: 0;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.allNotesDivWrapper {
+  display: block;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 632px;
+}
+
+.allNotesDiv {
+  width: 294px;
+  height: 89px;
+  padding: 15px 25px;
+  cursor: grab;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.1s ease-out;
+  font-size: 13px;
+  color: #4d4d4d;
+  background: #f8f8f8;
+}
+
+.allNotesContentInnerDiv > ul {
+  list-style: none;
+}
+
+.noteTitleLi {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  width: 293px;
+  height: 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.noteBodyLi {
+  width: 293px;
+  height: 30px;
+  font-weight: 300;
+  font-size: 13px;
+  color: #4d4d4d;
+  margin-bottom: 5px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.timeStampLi {
+  width: 293px;
+  height: 18px;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+.noteTitleLiWrapper {
+  display: flex;
+}
+
+span.favoritedHeartSolid {
+  z-index: 10;
+  color: #4ea92f;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+span.favoritedHeartClear {
+  z-index: 10;
+  color: #4ea92f;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.deleteNoteButtonWrapper {
+  text-align: center;
+}
+
+.deleteNoteButton {
+  background-color: white;
+  color: black;
+  border: 1px outset #e6e6e6;
+  transition-duration: 0.4s;
+  font-weight: 300;
+  font-size: 11.5px;
+  width: 149px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.deleteNoteButton:hover {
+  border-radius: 5px;
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.SingleNoteDisplayDiv {
+  margin: 15px 0;
+}
+
+.everythingAboveEditor {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+
+  /* width: 150px;
+  display: inline;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 82px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin-right: 50px;
+  margin-top: 15px; */
+}
+
+.singleNoteInputTitleDiv {
+  position: absolute;
+  margin-top: 135px;
+  margin-left: 39px;
+  font-size: 32px;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.ql-toolbar.ql-snow {
+  border-top: 1px solid #ece9f2;
+  margin-top: 15px;
+  margin-left: 13px;
+  margin-bottom: 58px;
+}
+
+.ql-container.ql-snow {
+  margin-left: 15px;
+}
+
+.noteInfoUl {
+  display: flex;
+  width: 788px;
+  justify-content: space-between;
+  border: 1px outset;
+  margin: 10px;
+  list-style-type: none;
+  overflow-y: auto;
+  text-align: start;
+  margin-right: 500px;
+  border: 1px solid;
+  padding: 18px;
+}
+
+.menuAboveEditor {
+  display: flex;
+  margin-inline-start: auto;
+}
+
+.submitEditDiv {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+}
+
+.submitEditDiv > button {
+  margin-left: 60px;
+  margin-right: 60px;
+  width: 100px;
+}
+
+/* select dropdown */
+
+.css-xp4uvy {
+  display: none;
+}
+
+.css-10nd86i {
+  width: 162px;
+  height: 36px;
+}
+
+.css-10nd86i > .css-vj8t7z {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.css-vj8t7z {
+  width: 37px;
+}
+
+.css-vj8t7z > div {
+  height: 0;
+}
+
+/* .css-1hwfws3 {
+  display: none;
+  heigh: 0;
+  width: 0;
+} */
+
+.css-1hwfws3 > .css-1g6gooi {
+  display: none;
+}
+
+.css-d8oujb {
+  display: none;
+}
+
+.css-1g6gooi > div {
+  display: none;
+}
+
+#react-select-3-input {
+  cursor: pointer;
+}
+
+/* dropdown flipped */
+.css-10nd86i {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  box-sizing: border-box;
+  margin-right: 25px;
+}
+
+/* removing hovering effect from text */
+.css-11unzgr > .css-v73v8k {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+
+  /* cursor: pointer; */
+}
+
+.css-15k3avv > .css-11unzgr {
+  background: transparent;
+}
+
+.css-11unzgr > .css-wqgs6e {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  background-color: #f5f5f5;
+}
+
+.secondLayerDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newNoteFormDiv {
+  width: 1180px;
+}
+
+.newNoteQuill {
+  margin-top: 53px;
+  margin-left: 11px;
+}
+
+.newNoteInput {
+  position: absolute;
+  margin-top: 115px;
+  margin-left: 39px;
+  font-size: 32px;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  width: 700px;
+}
+
+.newNoteInput::placeholder {
+  font-size: 20px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.submitEditDiv > button {
+  height: 32px;
+}
+
+.submitEditDiv {
+  width: 100%;
+}
+
+.newNoteFormDiv > .submitEditDiv {
+  width: 900px;
+}
+
+.newNoteQuill > .ql-container {
+  height: 150px;
+}
+
+.ql-editor {
+  margin-top: 125px;
+}

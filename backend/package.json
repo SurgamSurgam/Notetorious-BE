@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "backend",
   "version": "0.0.0",
   "private": true,
@@ -21,26 +20,6 @@
     "passport-local": "^1.0.0",
     "pg-promise": "^8.5.5"
   },
-=======
-  "name": "NOTEtorious-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others \"cd frontend && npm start\" \"cd backend && npm start\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SurgamSurgam/NOTEtorious.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
->>>>>>> 6db3c3557b704166021c6b9c3b65bf2e14002cf3
   "bugs": {
     "url": "https://github.com/SurgamSurgam/NOTEtorious/issues"
   },
