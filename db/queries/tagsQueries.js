@@ -1,12 +1,13 @@
 const db = require("../index.js");
 
-const getAllTagsFromAllUsers = (req, res, next) => {
-
-  db.any("SELECT * FROM tags")
+const getAllTags = (req, res, next) => {
+  db.any(
+    "SELECT name FROM taggings JOIN notes ON taggings.note_id=notes.id JOIN tags ON tags.id=taggings.tag_id "
+  )
     .then(tags => {
       res.status(200).json({
         status: "success",
-        message: "Got all tags everywhere from ALL users.",
+        message: "Got all tags from this ONE user.  (From all notebooks!)",
         body: tags
       });
     })
@@ -15,16 +16,13 @@ const getAllTagsFromAllUsers = (req, res, next) => {
     });
 };
 
-const getAllTags = (req, res, next) => {
-
-  db.any(
-    "SELECT name FROM taggings JOIN notes ON taggings.note_id=notes.id JOIN tags ON tags.id=taggings.tag_id WHERE notes.author_id=$1",
-    [req.session.currentUser.id]
-  )
+const getAllTagsFromAllUsers = (req, res, next) => {
+  console.log("boo");
+  db.any("SELECT * FROM tags")
     .then(tags => {
       res.status(200).json({
         status: "success",
-        message: "Got all tags from this ONE user.  (From all notebooks!)",
+        message: "Got all tags everywhere from ALL users.",
         body: tags
       });
     })
@@ -77,15 +75,14 @@ const addTagWithNoteId = async (req, res, next) => {
 };
 
 const addTagGenerallyWithoutNoteRef = (req, res, next) => {
-    db.none(
-      "INSERT INTO tags(name) VALUES (${name})",
-      req.body
-    ).then(()=> {
+  db.none("INSERT INTO tags(name) VALUES (${name})", req.body)
+    .then(() => {
       res.status(200).json({
         status: "success",
         message: "Note successfully added generally (not pointing to any note)!"
       });
-    }).catch(error => {
+    })
+    .catch(error => {
       next(error);
     });
 };

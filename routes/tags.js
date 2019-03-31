@@ -14,7 +14,7 @@ const { loginRequired } = require("../auth/helpers.js");
 
 /* GET users listing. */
 router.get("/", getAllTags);
-router.get("/all_tags", loginRequired, getAllTagsFromAllUsers);
+router.get("/all_tags", getAllTagsFromAllUsers);
 router.get("/:tag_id", loginRequired, getSingleTag);
 router.post("/user/note/:note_id", loginRequired, addTagWithNoteId);
 router.post("/", loginRequired, addTagGenerallyWithoutNoteRef);
