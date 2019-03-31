@@ -2,7 +2,8 @@ const db = require("../index.js");
 
 const getAllTags = (req, res, next) => {
   db.any(
-    "SELECT name FROM taggings JOIN notes ON taggings.note_id=notes.id JOIN tags ON tags.id=taggings.tag_id "
+    "SELECT name FROM taggings JOIN notes ON taggings.note_id=notes.id JOIN tags ON tags.id=taggings.tag_id WHERE notes.author_id=$1",
+    [req.session.currentUser.id]"
   )
     .then(tags => {
       res.status(200).json({
@@ -17,7 +18,6 @@ const getAllTags = (req, res, next) => {
 };
 
 const getAllTagsFromAllUsers = (req, res, next) => {
-  console.log("boo");
   db.any("SELECT * FROM tags")
     .then(tags => {
       res.status(200).json({
