@@ -15,47 +15,19 @@ Notetorious is a full-stack web application fully inspired by Evernote and built
 
 ## Screenshots
 
-![Notetorious](./images/notetorious-landing-page.png "Landing")
+![Notetorious](./docs/images/notetorious-landing-page.png "landing")
 
-![Notetorious](./images/notetorious-login-page.png "Login")
+![Notetorious](./docs/images/notetorious-login-page.png "login")
 
-![Notetorious](./images/notetorious-all-notes-page.png "all notes")
+![Notetorious](./docs/images/notetorious-all-notes-page.png "all notes")
 
-![Notetorious](./images/notetorious-notebooks-page.png "notebooks")
+![Notetorious](./docs/images/notetorious-notebooks-page.png "notebooks")
 
-![Notetorious](./images/notetorious-shortcuts-page.png "shortcuts")
+![Notetorious](./docs/images/notetorious-shortcuts-page.png "shortcuts")
 
 ## Project Design Docs
 
 View the original _[project proposal](./original-readme.md)_ to see to a README including all [wireframes](./wireframes), [api endpoints](./api-endpoints.md), [database schema](./schema.md), a sample React [component hierarchy](./component-hierarchy.md), a [sample state](./sample-state.md), and the implementation timeline that covers 3 weeks.
-
-## Usage
-
-#### Clone this repo
-
-```
-$ git clone https://github.com/SurgamSurgam/Notetorious.git && cd Notetorious
-```
-
-#### CD into `/backend` and run `npm install`
-
-```
-$ cd backend/ && npm install
-```
-
-#### CD into `/frontend` and run `npm install`
-
-```
-$ cd frontend/ && npm install
-```
-
-### Running Server
-
-#### CD into `/Notetorious` and Run `npm start`
-
-```
-$ npm start
-```
 
 ## Future Implementations
 
