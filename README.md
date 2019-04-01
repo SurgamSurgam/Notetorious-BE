@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/SurgamSurgam/Notetorious.svg?branch=master)](https://travis-ci.org/SurgamSurgam/Notetorious)
+[![Build Status](https://travis-ci.org/SurgamSurgam/Notetorious-BE.svg?branch=master)](https://travis-ci.org/SurgamSurgam/Notetorious-BE)
 
 # Notetorious
 
