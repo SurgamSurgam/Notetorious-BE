@@ -13,6 +13,7 @@ var notebooksRouter = require("./routes/notebooks.js");
 var notesRouter = require("./routes/notes.js");
 var tagsRouter = require("./routes/tags.js");
 var sessionsRouter = require("./routes/sessions.js");
+let cors = require("cors");
 
 var app = express();
 
@@ -20,6 +21,7 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
+app.use(cors());
 // most app.use below:
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
